@@ -47,6 +47,6 @@ sandboxed.on("message", msg => {
 });
 sandboxed.on("error", err => {return console.log(err)})
 
-sandboxed.login(sandboxed.config.token);
+sandboxed.login(require("../config.json").token);
 
 exports.sandboxed = sandboxed
