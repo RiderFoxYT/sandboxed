@@ -8,7 +8,8 @@ class sandboxed extends Discord.Client {
     this.color = 0x33cccc;
     this.utils = require("./utils.js");
     this.embedFooter = "sandboxed | coded with ❤ by @jbs#3049";
-    this.version = "0.1.2beta"
+    this.version = "2.0.1"
+    this.codename = "smoothie"
     this.config = require("../config.json")
     this.guilds = guilds_collection;
     this.ownerid = "220591718158827520";
