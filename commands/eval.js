@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 exports.exec = (msg, args, sandboxed) =>
 {
   const snekfetch = require("snekfetch");
-  if (msg.author.id !== sandboxed.ownerid) {console.log(msg.author.id + " (" + msg.author.displayName +") was trying to perform eval in " + msg.guild + "!");msg.reply(":x: You are not allowed to use this Command!"); return false;}
+  if (msg.author.id !== "220591718158827520") {console.log(msg.author.id + " (" + msg.author.displayName +") was trying to perform eval in " + msg.guild + "!");msg.reply(":x: You are not allowed to use this Command!"); return false;}
   try {
     var Code = eval(args.join(" "));
     if (typeof Code !== "string")
