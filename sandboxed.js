@@ -6,7 +6,7 @@ var guilds_collection = new Discord.Collection();
 
 sandboxed.on("ready", () => {
   utils.log("Ready!");
-  sandboxed.user.setGame(">>help | " + sandboxed.guilds.size + "servers <3")
+  sandboxed.user.setGame(">>help | " + sandboxed.guilds.size + " Guilds ❤", "https://twitch.tv/lordjbs")
 
   sandboxed.color = 0x33cccc;
   sandboxed.utils = require("./utils.js");
