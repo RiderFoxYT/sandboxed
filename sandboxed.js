@@ -18,7 +18,6 @@ sandboxed.on("ready", () => {
 
 sandboxed.on("message", msg => {
   var prefix = ">>";
-  utils.log("debug: Recived message but im still not working")
   if (!msg.content.startsWith(prefix)) return false;
   if(msg.author.bot) return false;
 
