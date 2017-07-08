@@ -8,7 +8,6 @@ const YouTube = new youtube_api(cfg.yttoken)
 
 exports.exec = (msg, args, sandboxed) =>
 {
-  try{
   let channel = msg.member.voiceChannel;
   const client = sandboxed.client;
   if(!channel) return msg.reply(":x: You are not in a voice-channel!");
@@ -27,12 +26,13 @@ exports.exec = (msg, args, sandboxed) =>
 
         })
       }).catch(console.error);
-    }catch(e) {
-      msg.channel.send("```js\n" + e  + "```");
-    }
 }
 
 exports.cmd = {
   usage: "<yturl>",
   disabled: false
 }
+
+process.on("unhandledRejection", error => {
+  console.error("Uncaught promise error:\n" + error.stack)
+})
