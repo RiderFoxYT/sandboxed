@@ -21,7 +21,6 @@ sandboxed.on("ready", () => {
     var id = x.id
     guilds_collection.set("" + id, {name: x.name, owner: x.owner, channels: x.channels, users: x.members, member_count: x.members.size, channel_count: x.channels.size})
   })
-}
 
 });
 
