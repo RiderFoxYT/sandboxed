@@ -9,22 +9,16 @@ sandboxed.on("ready", () => {
   sandboxed.user.setGame(">>help | " + sandboxed.guilds.size + " Guilds ❤", "https://twitch.tv/lordjbs")
 
   sandboxed.color = 0x33cccc;
-  sandboxed.utils = require("./utils.js");
   sandboxed.embedFooter = "sandboxed | coded with ❤ by @jbs#3049";
   sandboxed.version = "2.0.1"
   sandboxed.codename = "smoothie"
   sandboxed.config = require("../config.json")
-  sandboxed.guilds = guilds_collection;
-  sandboxed.ownerid = "220591718158827520";
-  sandboxed.guilds.forEach(x => {
-    var id = x.id
-    guilds_collection.set("" + id, {name: x.name, owner: x.owner, channels: x.channels, users: x.members, member_count: x.members.size, channel_count: x.channels.size})
-  })
-
+  utils.log("i am working")
 });
 
 sandboxed.on("message", msg => {
   var prefix = ">>";
+  utils.log("debug: Recived message but im still not working")
   if (!msg.content.startsWith(prefix)) return false;
   if(msg.author.bot) return false;
 
