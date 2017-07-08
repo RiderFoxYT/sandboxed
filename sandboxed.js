@@ -1,6 +1,5 @@
 const Discord = require("discord.js");
-const client = require("./client.js");
-const sandboxed = new client();
+const sandboxed = new Discord.Client();
 const utils = require("./utils.js");
 const fs = require("fs");
 var guilds_collection = new Discord.Collection();
