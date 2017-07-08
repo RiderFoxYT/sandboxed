@@ -13,7 +13,7 @@ exports.exec = (msg, args, sandboxed) =>
   if(!channel) return msg.reply(":x: You are not in a voice-channel!");
   channel.join()
       .then(connection => {
-        yt.searchVideos(args.join(" "), 1).then(results => {
+        YouTube.searchVideos(args.join(" "), 1).then(results => {
           var url = "https://youtube.com/watch?v=" + results[0].id
                 const streamOptions = { seek: 0, volume: 1 };
                 const stream = ytdl(url, { filter : 'audioonly', quality: 'highest'});
